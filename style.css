@@ -1,0 +1,160 @@
+@font-face {
+    font-family: aniversarioTitle ;
+    src: url(fontes/Birthday\ -\ Personal\ Use.otf);  
+}
+
+@font-face {
+    font-family: aniversarioParagrafo;
+    src: url(fontes/Semiflora.otf);
+}
+
+@font-face {
+    font-family: niverParagrafo ;
+    src: url(fontes/DancingScript-VariableFont_wght.ttf);
+}
+
+:root { 
+    --niverh1: aniversarioTitle;
+    --niverP: aniversarioParagrafo;
+    --niverP2: niverParagrafo;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+/*     background-color: lightcoral; */
+background-color: #eec6ce;
+}
+
+
+.boas-vindas {
+    height: 700px;
+    width: 400px;
+    display:flex;
+    flex-direction: column;
+   
+
+
+}
+.boas-vindas h1 {
+    text-align: center; 
+    font-family: var(--niverh1);
+    font-size: 5em;
+    color: rgba(250, 250, 250, 0.87);
+/*  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171); */
+    text-shadow: 3px 3px 5px  rgb(240, 106, 129);
+}
+
+#button { 
+margin: auto;
+}
+
+#button img { 
+    width: 200px;
+}
+
+#button img:hover {
+    width: 300px;
+    transition-duration: 0.3s;
+}
+
+#button img:active {
+    width: 300px;
+    transition-duration: 0.3s;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao-aniversario {
+    width: 400px;
+    height: 700px;
+    perspective: 2000px;
+    position: relative;
+    border-radius: 25px;
+}
+
+.pagina-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.pag1 > h1 {
+    font-family: var(--niverh1);
+    font-size: 3em;
+    padding: 20px;
+    color: rgb(240, 106, 129);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.171);
+}
+
+.pag1 p { 
+    font-family: var(--niverP2);
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 20px;
+    line-height: 1.5em;
+}
+
+.pag2 h1{
+    color: rgb(240, 106, 129);
+    padding: 20px;
+    font-size: 3.5em; 
+    font-family: var(--niverh1);
+    text-shadow: 1px 1px 5px  rgba(0, 0, 0, 0.493);
+
+}
+
+.pag2 p{ 
+    font-family: var(--niverP2);
+    padding: 20px 0px;
+    font-size: 1.5em;
+    font-weight: 700;
+
+}
+
+.pagina {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease;
+    transform-origin: left;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pagina img {
+    max-width: 90%;
+    padding: 10px;
+}
+
+/* Página ativa */
+.pagina.ativa {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* Página já virada */
+.pagina.virada {
+    transform: rotateY(-180deg);
+    z-index: 0;
+}

@@ -67,6 +67,8 @@ margin: auto;
     transition-duration: 0.3s;
 }
 
+
+
 #container {
     height: 100vh;
     width: 100vw;
@@ -88,6 +90,17 @@ margin: auto;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
+}
+
+p#msgtutorial {
+color: rgb(189, 79, 97);
+font-family: arial;
+font-size: 12pt;
+padding: 0px 2px;
+margin-top: 5px;
+font-weight: lighter;
+font-style:italic;
+
 }
 
 .pag1 > h1 {

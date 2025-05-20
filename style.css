@@ -171,31 +171,3 @@ font-style:italic;
     transform: rotateY(-180deg);
     z-index: 0;
 }
-
-/* Forçando o modo escuro */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #eec6ce; /* Manter a cor de fundo original */
-        color: rgba(250, 250, 250, 0.87); /* Manter a cor do texto */
-    }
-
-    .boas-vindas h1 {
-        color: rgba(250, 250, 250, 0.87); /* Cor do texto */
-        text-shadow: 3px 3px 5px rgb(240, 106, 129); /* Cor da sombra */
-    }
-
-    .pag1 > h1 {
-        color: rgb(240, 106, 129); /* Cor de destaque */
-        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.171);
-    }
-
-    .pag2 h1 {
-        color: rgb(240, 106, 129); /* Cor de destaque */
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.493);
-    }
-
-    .pagina {
-        background-color: white; /* Garantir que a página tenha fundo branco */
-    }
-
-}
